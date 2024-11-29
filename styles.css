@@ -1,0 +1,294 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Landing Page Styles */
+body.landing-page {
+    background: url('images/landing-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.overlay {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.overlay nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.overlay nav ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.overlay nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Content Page Styles */
+body.content-page {
+    font-family: Arial, sans-serif;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.content-page main {
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.content-page section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-page h2 {
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+.content-page p, .content-page ul, .content-page form {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.content-page ul {
+    padding-left: 20px;
+}
+
+.content-page ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer Styling */
+.content-page footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Contact Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #32c5e7ea;
+
+}
+
+/* Specific Backgrounds for Each Page */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Itim', sans-serif; /* Apply the font */
+}
+
+/* General styles for all pages */
+.landing-page, .other-page {
+    background-image: url('path/to/your/background-image.jpg'); /* Replace with your background image URL */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Fixed background while scrolling */
+    background-repeat: no-repeat; /* Prevents tiling */
+    color: white; /* Text color */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    position: relative; /* Position relative to contain absolutely positioned children */
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Itim', sans-serif; /* Apply the font */
+}
+
+/* Animation for gradient background */
+@keyframes gradientAnimation {
+    0% {
+        background-color: #d64b4bc3; /* Starting color */
+        background-image: linear-gradient(90deg, #0b0b0ab6, #0b0b0ac0);
+    }
+    50% {
+        background-color: #160a02e2; /* Middle color */
+        background-image: linear-gradient(90deg, #040404ad, #14100f);
+    }
+    100% {
+        background-color: #0b090966; /* End color */
+        background-image: linear-gradient(90deg, #14121175, #0d0d0d5d);
+    }
+}
+
+.landing-page, .other-page {
+    background-size: 400% 400%; /* Extend the background size for smooth transitions */
+    animation: gradientAnimation 10s ease infinite; /* Set animation duration and infinite loop */
+    color: white; /* Text color */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    position: relative; /* Position relative to contain absolutely positioned children */
+}
+
+/* Overlay styles */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    text-align: center; /* Center text */
+    position: absolute; /* Position absolutely within the parent */
+}
+
+/* Other styles... */
+
+
+@keyframes flash {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        opacity: 0; /* Fully transparent */
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+    }
+}
+
+/* Flash animation for the landing page */
+.landing-page .overlay {
+    background-color: rgba(0, 0, 0, 0.801); /* Semi-transparent background */
+    padding: 20px;
+    text-align: center; /* Center text */
+    position: absolute; /* Position absolutely within the parent */
+    animation: flash 1s infinite; /* Apply the flash animation */
+}
+
+/* Fade-in animation for other pages */
+.other-page .overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    text-align: center; /* Center text */
+    position: absolute; /* Position absolutely within the parent */
+    animation: fadeIn 1s ease-in; /* Apply the fade-in animation */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+nav ul li {
+    display: inline; /* Display links inline */
+    margin: 0 15px; /* Space out the links */
+}
+
+nav ul li a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.8s ease, transform 0.8s ease; /* Smooth color and transform transitions */
+}
+
+nav ul li a:hover {
+    color: #f0a500; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the link */
+}
+.alert-heading {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly below */
+    animation: alertAnimation 0.5s forwards; /* Apply animation */
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+@keyframes alertAnimation {
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+
+
+/* Style for active link */
+.itim-regular {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devs Club FAQ</title>
+    <style>
+        /* Basic page styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .faq-section {
+            max-width: 600px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007acc;
+        }
+
+        /* Styling for each question */
+        .faq-item {
+            margin-top: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .faq-question {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007acc;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+        .faq-answer {
+            display: none;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #555;
+            margin-top: 10px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        /* Icon rotation for open/close */
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="faq-section">
+        <h1>Frequently Asked Questions</h1>
+
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What is Devs Club?</span>
+                <i>▼</i>
+            </div>
+            <div class="faq-answer">
+                Devs Club is a community of developers who come together to learn, share, and collaborate on tech projects.
+            </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>What skills are needed to join the club?</span>
+                <i>▼</i>
+            </div>
+            <div class="faq-answer">
+                Basic knowledge of programming is a plus, but all levels are welcome! The club encourages continuous learning in areas like web development, data science, and app development.
+            </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>How can I join the club?</span>
+                <i>▼</i>
+            </div>
+            <div class="faq-answer">
+                To join, simply sign up on our website, and you'll be invited to attend our next orientation session!
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle the FAQ question toggle with animation
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+
+                // Toggle active class for icon rotation
+                question.classList.toggle('active');
+
+                // Toggle the answer display with smooth animation
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    answer.style.display = "none";
+                } else {
+                    answer.style.display = "block";
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
